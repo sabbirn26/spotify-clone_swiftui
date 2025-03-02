@@ -12,6 +12,8 @@
 		89EDEE1D2D74204100D70946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89EDEE1C2D74204100D70946 /* Assets.xcassets */; };
 		89EDEE202D74204100D70946 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89EDEE1F2D74204100D70946 /* Preview Assets.xcassets */; };
 		89EDEE282D7422F000D70946 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 89EDEE272D7422F000D70946 /* SDWebImageSwiftUI */; };
+		89EDEE2B2D7423F300D70946 /* ImageLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDEE2A2D7423F300D70946 /* ImageLoaderView.swift */; };
+		89EDEE2D2D74265300D70946 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDEE2C2D74265300D70946 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		89EDEE1A2D74203F00D70946 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		89EDEE1C2D74204100D70946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89EDEE1F2D74204100D70946 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		89EDEE2A2D7423F300D70946 /* ImageLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderView.swift; sourceTree = "<group>"; };
+		89EDEE2C2D74265300D70946 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 		89EDEE292D74238D00D70946 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				89EDEE2A2D7423F300D70946 /* ImageLoaderView.swift */,
+				89EDEE2C2D74265300D70946 /* Constants.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -153,8 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89EDEE2B2D7423F300D70946 /* ImageLoaderView.swift in Sources */,
 				89EDEE1B2D74203F00D70946 /* ContentView.swift in Sources */,
 				89EDEE192D74203F00D70946 /* SpotifySwiftuiApp.swift in Sources */,
+				89EDEE2D2D74265300D70946 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
