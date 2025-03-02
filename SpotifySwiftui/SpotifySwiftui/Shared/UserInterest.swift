@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftfulUI
+import SwiftUI
 
 struct UserInterest: Identifiable {
     let id = UUID().uuidString

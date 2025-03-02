@@ -16,6 +16,10 @@
 		89EDEE2D2D74265300D70946 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDEE2C2D74265300D70946 /* Constants.swift */; };
 		89EDEE2F2D7428D200D70946 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDEE2E2D7428D200D70946 /* DatabaseHelper.swift */; };
 		89EDEE312D742D6900D70946 /* UserInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDEE302D742D6900D70946 /* UserInterest.swift */; };
+		89EDEE332D742FE400D70946 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDEE322D742FE400D70946 /* Product.swift */; };
+		89EDEE352D742FED00D70946 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDEE342D742FED00D70946 /* User.swift */; };
+		89EDEE382D7430D100D70946 /* SwiftfulUI in Frameworks */ = {isa = PBXBuildFile; productRef = 89EDEE372D7430D100D70946 /* SwiftfulUI */; };
+		89EDEE3A2D74311300D70946 /* InterestPillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDEE392D74311300D70946 /* InterestPillView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,9 @@
 		89EDEE2C2D74265300D70946 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		89EDEE2E2D7428D200D70946 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		89EDEE302D742D6900D70946 /* UserInterest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInterest.swift; sourceTree = "<group>"; };
+		89EDEE322D742FE400D70946 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		89EDEE342D742FED00D70946 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		89EDEE392D74311300D70946 /* InterestPillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestPillView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89EDEE382D7430D100D70946 /* SwiftfulUI in Frameworks */,
 				89EDEE282D7422F000D70946 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +93,9 @@
 				89EDEE2C2D74265300D70946 /* Constants.swift */,
 				89EDEE2E2D7428D200D70946 /* DatabaseHelper.swift */,
 				89EDEE302D742D6900D70946 /* UserInterest.swift */,
+				89EDEE392D74311300D70946 /* InterestPillView.swift */,
+				89EDEE322D742FE400D70946 /* Product.swift */,
+				89EDEE342D742FED00D70946 /* User.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -107,6 +118,7 @@
 			name = SpotifySwiftui;
 			packageProductDependencies = (
 				89EDEE272D7422F000D70946 /* SDWebImageSwiftUI */,
+				89EDEE372D7430D100D70946 /* SwiftfulUI */,
 			);
 			productName = SpotifySwiftui;
 			productReference = 89EDEE152D74203F00D70946 /* SpotifySwiftui.app */;
@@ -138,6 +150,7 @@
 			mainGroup = 89EDEE0C2D74203F00D70946;
 			packageReferences = (
 				89EDEE262D7422F000D70946 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				89EDEE362D7430D100D70946 /* XCRemoteSwiftPackageReference "SwiftfulUI" */,
 			);
 			productRefGroup = 89EDEE162D74203F00D70946 /* Products */;
 			projectDirPath = "";
@@ -168,9 +181,12 @@
 				89EDEE2B2D7423F300D70946 /* ImageLoaderView.swift in Sources */,
 				89EDEE2F2D7428D200D70946 /* DatabaseHelper.swift in Sources */,
 				89EDEE312D742D6900D70946 /* UserInterest.swift in Sources */,
+				89EDEE3A2D74311300D70946 /* InterestPillView.swift in Sources */,
 				89EDEE1B2D74203F00D70946 /* ContentView.swift in Sources */,
+				89EDEE352D742FED00D70946 /* User.swift in Sources */,
 				89EDEE192D74203F00D70946 /* SpotifySwiftuiApp.swift in Sources */,
 				89EDEE2D2D74265300D70946 /* Constants.swift in Sources */,
+				89EDEE332D742FE400D70946 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +402,14 @@
 				minimumVersion = 3.1.3;
 			};
 		};
+		89EDEE362D7430D100D70946 /* XCRemoteSwiftPackageReference "SwiftfulUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -393,6 +417,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 89EDEE262D7422F000D70946 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		89EDEE372D7430D100D70946 /* SwiftfulUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89EDEE362D7430D100D70946 /* XCRemoteSwiftPackageReference "SwiftfulUI" */;
+			productName = SwiftfulUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
