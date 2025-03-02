@@ -13,8 +13,8 @@ struct ContentView: View {
     var body: some View {
         ScrollView{
             VStack{
-                ForEach(users) { users in
-                    Text(users.firstName)
+                ForEach(products) { products in
+                    Text(products.title)
                     
                 }
             }

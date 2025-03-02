@@ -20,6 +20,7 @@
 		89EDEE352D742FED00D70946 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDEE342D742FED00D70946 /* User.swift */; };
 		89EDEE382D7430D100D70946 /* SwiftfulUI in Frameworks */ = {isa = PBXBuildFile; productRef = 89EDEE372D7430D100D70946 /* SwiftfulUI */; };
 		89EDEE3A2D74311300D70946 /* InterestPillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDEE392D74311300D70946 /* InterestPillView.swift */; };
+		89EDEE3D2D74425900D70946 /* SwiftfulRouting in Frameworks */ = {isa = PBXBuildFile; productRef = 89EDEE3C2D74425900D70946 /* SwiftfulRouting */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89EDEE382D7430D100D70946 /* SwiftfulUI in Frameworks */,
+				89EDEE3D2D74425900D70946 /* SwiftfulRouting in Frameworks */,
 				89EDEE282D7422F000D70946 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,6 +121,7 @@
 			packageProductDependencies = (
 				89EDEE272D7422F000D70946 /* SDWebImageSwiftUI */,
 				89EDEE372D7430D100D70946 /* SwiftfulUI */,
+				89EDEE3C2D74425900D70946 /* SwiftfulRouting */,
 			);
 			productName = SpotifySwiftui;
 			productReference = 89EDEE152D74203F00D70946 /* SpotifySwiftui.app */;
@@ -151,6 +154,7 @@
 			packageReferences = (
 				89EDEE262D7422F000D70946 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				89EDEE362D7430D100D70946 /* XCRemoteSwiftPackageReference "SwiftfulUI" */,
+				89EDEE3B2D74425900D70946 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */,
 			);
 			productRefGroup = 89EDEE162D74203F00D70946 /* Products */;
 			projectDirPath = "";
@@ -410,6 +414,14 @@
 				minimumVersion = 1.2.0;
 			};
 		};
+		89EDEE3B2D74425900D70946 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulRouting.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.6;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -422,6 +434,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 89EDEE362D7430D100D70946 /* XCRemoteSwiftPackageReference "SwiftfulUI" */;
 			productName = SwiftfulUI;
+		};
+		89EDEE3C2D74425900D70946 /* SwiftfulRouting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89EDEE3B2D74425900D70946 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */;
+			productName = SwiftfulRouting;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
