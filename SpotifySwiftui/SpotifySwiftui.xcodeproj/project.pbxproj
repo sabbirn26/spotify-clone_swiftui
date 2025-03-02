@@ -14,6 +14,8 @@
 		89EDEE282D7422F000D70946 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 89EDEE272D7422F000D70946 /* SDWebImageSwiftUI */; };
 		89EDEE2B2D7423F300D70946 /* ImageLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDEE2A2D7423F300D70946 /* ImageLoaderView.swift */; };
 		89EDEE2D2D74265300D70946 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDEE2C2D74265300D70946 /* Constants.swift */; };
+		89EDEE2F2D7428D200D70946 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDEE2E2D7428D200D70946 /* DatabaseHelper.swift */; };
+		89EDEE312D742D6900D70946 /* UserInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDEE302D742D6900D70946 /* UserInterest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		89EDEE1F2D74204100D70946 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		89EDEE2A2D7423F300D70946 /* ImageLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderView.swift; sourceTree = "<group>"; };
 		89EDEE2C2D74265300D70946 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		89EDEE2E2D7428D200D70946 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
+		89EDEE302D742D6900D70946 /* UserInterest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInterest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			children = (
 				89EDEE2A2D7423F300D70946 /* ImageLoaderView.swift */,
 				89EDEE2C2D74265300D70946 /* Constants.swift */,
+				89EDEE2E2D7428D200D70946 /* DatabaseHelper.swift */,
+				89EDEE302D742D6900D70946 /* UserInterest.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -160,6 +166,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				89EDEE2B2D7423F300D70946 /* ImageLoaderView.swift in Sources */,
+				89EDEE2F2D7428D200D70946 /* DatabaseHelper.swift in Sources */,
+				89EDEE312D742D6900D70946 /* UserInterest.swift in Sources */,
 				89EDEE1B2D74203F00D70946 /* ContentView.swift in Sources */,
 				89EDEE192D74203F00D70946 /* SpotifySwiftuiApp.swift in Sources */,
 				89EDEE2D2D74265300D70946 /* Constants.swift in Sources */,

@@ -26,7 +26,7 @@ struct ImageLoaderView: View {
 
 #Preview {
     ImageLoaderView()
-//        .cornerRadius(30)
+        .cornerRadius(30)
         .padding(40)
         .padding(.vertical, 60)
 }
