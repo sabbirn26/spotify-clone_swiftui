@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89A577222D75881E004C8440 /* SpotifyHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A577212D75881E004C8440 /* SpotifyHomeView.swift */; };
 		89EDEE192D74203F00D70946 /* SpotifySwiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDEE182D74203F00D70946 /* SpotifySwiftuiApp.swift */; };
 		89EDEE1B2D74203F00D70946 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDEE1A2D74203F00D70946 /* ContentView.swift */; };
 		89EDEE1D2D74204100D70946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89EDEE1C2D74204100D70946 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		89A577212D75881E004C8440 /* SpotifyHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyHomeView.swift; sourceTree = "<group>"; };
 		89EDEE152D74203F00D70946 /* SpotifySwiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifySwiftui.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89EDEE182D74203F00D70946 /* SpotifySwiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifySwiftuiApp.swift; sourceTree = "<group>"; };
 		89EDEE1A2D74203F00D70946 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +54,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89A577202D75880D004C8440 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				89A577212D75881E004C8440 /* SpotifyHomeView.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		89A577232D758B99004C8440 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		89EDEE0C2D74203F00D70946 = {
 			isa = PBXGroup;
 			children = (
@@ -71,9 +88,11 @@
 		89EDEE172D74203F00D70946 /* SpotifySwiftui */ = {
 			isa = PBXGroup;
 			children = (
-				89EDEE292D74238D00D70946 /* Shared */,
 				89EDEE182D74203F00D70946 /* SpotifySwiftuiApp.swift */,
 				89EDEE1A2D74203F00D70946 /* ContentView.swift */,
+				89A577202D75880D004C8440 /* Core */,
+				89A577232D758B99004C8440 /* Components */,
+				89EDEE292D74238D00D70946 /* Shared */,
 				89EDEE1C2D74204100D70946 /* Assets.xcassets */,
 				89EDEE1E2D74204100D70946 /* Preview Content */,
 			);
@@ -182,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89A577222D75881E004C8440 /* SpotifyHomeView.swift in Sources */,
 				89EDEE2B2D7423F300D70946 /* ImageLoaderView.swift in Sources */,
 				89EDEE2F2D7428D200D70946 /* DatabaseHelper.swift in Sources */,
 				89EDEE312D742D6900D70946 /* UserInterest.swift in Sources */,
