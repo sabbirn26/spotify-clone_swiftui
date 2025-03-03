@@ -9,32 +9,13 @@ import SwiftUI
 
 struct SpotifyHomeView: View {
     @State private var currentUser: User? = nil
+    @State private var selectedCategory: Category? = nil
     var body: some View {
         ZStack{
             Color.spBlack.ignoresSafeArea()
-            
-            HStack{
-                if let currentUser {
-                    ImageLoaderView()
-                        .frame(width: 30, height: 30)
-                        .background(.spWhite)
-                        .clipShape(Circle())
-                        .onTapGesture {
-                            print("Profile View Tapped")
-                        }
-                }
-                
-                ScrollView (.horizontal){
-                    HStack(spacing: 8){
-                        ForEach(0..<20) { _ in
-                            Rectangle()
-                                .fill(Color.red)
-                                .frame(width: 10, height: 10)
-                            
-                        }
-                    }
-                }
-                .scrollIndicators(.hidden)
+            VStack{
+                headerView
+                Spacer()
             }
         }
         .task {
@@ -48,6 +29,38 @@ struct SpotifyHomeView: View {
 //            products = try await DatabaseHelper().getProducts()
         } catch {
             
+        }
+    }
+}
+
+extension SpotifyHomeView {
+    private var headerView : some View {
+        HStack(spacing: 0){
+            ZStack{
+                if let currentUser {
+                    ImageLoaderView()
+                        
+                        .background(.spWhite)
+                        .clipShape(Circle())
+                        .onTapGesture {
+                            print("Profile View Tapped")
+                        }
+                }
+            }
+            .frame(width: 35, height: 35)
+            
+            ScrollView (.horizontal){
+                HStack(spacing: 8){
+                    ForEach(Category.allCases, id: \.self) { category in
+                        SpotifyCatagoryCell(title: category.rawValue.capitalized, isSelected: category == selectedCategory)
+                            .onTapGesture {
+                                selectedCategory = category
+                            }
+                    }
+                }
+                .padding(.horizontal, 16)
+            }
+            .scrollIndicators(.hidden)
         }
     }
 }
