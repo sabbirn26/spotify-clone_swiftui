@@ -79,7 +79,7 @@ extension SpotifyHomeView {
         }
         .padding(.vertical, 24)
         .padding(.leading, 8)
-        .background(Color.black)
+        .background(Color.spBlack)
         
     }
 }
