@@ -15,6 +15,9 @@ struct SpotifyNewReleasedCell: View {
     var title: String? = "demo title"
     var subtitle: String? = "demo subtitle"
     
+    var addtoPlayListBtnAction: (() -> Void)? = nil
+    var playThePlayListBtnAction: (() -> Void)? = nil
+    
     var body: some View {
         VStack(spacing: 16) {
             HStack{
@@ -62,22 +65,28 @@ struct SpotifyNewReleasedCell: View {
                         Image(systemName: "plus.circle")
                             .font(.title3)
                             .foregroundStyle(.spLightGray)
+                            .padding(4)
+                            .background(Color.black.opacity(0.001))
                             .onTapGesture {
                                 //do something here -
+                                addtoPlayListBtnAction?()
                             }
+                            .offset(x: -4)
                             .frame(maxWidth: .infinity, alignment: .leading)
                         Image(systemName: "play.circle.fill")
                             .font(.title3)
                             .foregroundStyle(.spWhite)
-                            .onTapGesture {
-                                //do something here -
-                            }
+                            
                     }
                 }
                 .padding(.trailing, 16)
             }
             .themeColors(isSelected: false)
             .cornerRadius(8)
+            .onTapGesture {
+                //do something here -
+                playThePlayListBtnAction?()
+            }
         }
     }
 }
