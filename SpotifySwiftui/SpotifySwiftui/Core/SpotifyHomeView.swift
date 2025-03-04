@@ -23,6 +23,23 @@ struct SpotifyHomeView: View {
                             if let product = products.first {
                                 newReleasedSection(product: product)
                             }
+                            
+                            VStack(spacing: 8){
+                                Text("Demo Title")
+                                    .font(.title)
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(.spWhite)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                
+                                ScrollView(.horizontal){
+                                    HStack{
+                                        ForEach(0..<20) { _ in
+                                            ImageTitleRowCell()
+                                        }
+                                    }
+                                }
+                                .scrollIndicators(.hidden)
+                            }
                         }
                         .padding(.horizontal, 16)
                         ForEach(0..<20) { _ in
