@@ -57,6 +57,7 @@ struct SpotifyNewReleasedCell: View {
                         if let subtitle {
                             Text(subtitle)
                                 .foregroundStyle(.spLightGray)
+                                .lineLimit(2)
                         }
                     }
                     .font(.callout)

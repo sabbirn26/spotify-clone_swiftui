@@ -17,7 +17,14 @@ struct SpotifyHomeView: View {
             ScrollView(.vertical){
                 LazyVStack(spacing: 1, pinnedViews: [.sectionHeaders]) {
                     Section {
-                        recentSection
+                        VStack{
+                            recentSection
+                            
+                            if let product = products.first {
+                                newReleasedSection(product: product)
+                            }
+                        }
+                        .padding(.horizontal, 16)
                         ForEach(0..<20) { _ in
                             Rectangle()
                                 .fill(Color.red)
@@ -90,6 +97,14 @@ extension SpotifyHomeView {
                 }
             }
         }
+    }
+    
+    private func newReleasedSection(product: Product) -> some View {
+        SpotifyNewReleasedCell(imageName: product.firstImage, headline: product.brand, subheadline: product.category, title: product.title, subtitle: product.description, addtoPlayListBtnAction: {
+            
+        }, playThePlayListBtnAction: {
+            
+        })
     }
 }
 
