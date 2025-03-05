@@ -29,12 +29,7 @@ struct SpotifyHomeView: View {
                             
                             productSection
                         }
-                        
-//                        ForEach(0..<20) { _ in
-//                            Rectangle()
-//                                .fill(Color.red)
-//                                .frame(width: 200, height: 200)
-//                        }
+
                     } header: {
                         headerView
                     }
