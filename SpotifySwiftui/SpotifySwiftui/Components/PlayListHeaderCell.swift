@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PlayListHeaderCell: View {
+    var height: CGFloat = 300
     var title: String = "This is the demo title"
     var subtitle: String = "This is the demo subtitle"
     var imageName: String = Constants.randomImage
@@ -18,8 +19,8 @@ struct PlayListHeaderCell: View {
             .overlay {
                 ImageLoaderView(urlString: imageName)
             }
-            .asStretchyHeader(startingHeight: 300)
-            .frame(height: 300)
+            
+//            .frame(height: 300)
             .overlay(
                 VStack(alignment: .leading, spacing: 8){
                     Text(subtitle)
@@ -36,6 +37,7 @@ struct PlayListHeaderCell: View {
                     )
                 , alignment: .bottomLeading
             )
+            .asStretchyHeader(startingHeight: height)
     }
 }
 
