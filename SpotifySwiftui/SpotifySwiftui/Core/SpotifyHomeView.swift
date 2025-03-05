@@ -27,7 +27,7 @@ struct SpotifyHomeView: View {
                                     .padding(.horizontal, 16)
                             }
                             
-                            productSection
+                            productRowsSection
                         }
                         
                         ForEach(0..<20) { _ in
