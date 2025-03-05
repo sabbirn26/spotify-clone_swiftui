@@ -57,7 +57,7 @@ struct SpotifyHomeView: View {
             var rows: [ProductRow] = []
             let allBrands = Set(products.map({ $0._brand }))
             for brand in allBrands {
-//                let products = self.products.filter({ $0.brand == brand })
+                //                let products = self.products.filter({ $0.brand == brand })
                 rows.append(ProductRow(title: brand.capitalized, products: products))
                 
                 productRows = rows
@@ -112,7 +112,7 @@ extension SpotifyHomeView {
         }
     }
     
-    private var productSection : some View {
+    private var productRowsSection : some View {
         ForEach(productRows) { row in
             VStack(spacing: 8){
                 Text(row.title)
