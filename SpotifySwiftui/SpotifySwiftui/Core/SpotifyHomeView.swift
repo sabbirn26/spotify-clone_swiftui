@@ -27,14 +27,14 @@ struct SpotifyHomeView: View {
                                     .padding(.horizontal, 16)
                             }
                             
-                            productRowsSection
+                            productSection
                         }
                         
-                        ForEach(0..<20) { _ in
-                            Rectangle()
-                                .fill(Color.red)
-                                .frame(width: 200, height: 200)
-                        }
+//                        ForEach(0..<20) { _ in
+//                            Rectangle()
+//                                .fill(Color.red)
+//                                .frame(width: 200, height: 200)
+//                        }
                     } header: {
                         headerView
                     }
@@ -107,12 +107,15 @@ extension SpotifyHomeView {
             NonLazyVGrid(columns: 2, alignment: .center, spacing: 10, items: products) { product in
                 if let product {
                     SpotifyRecentCells(imageName: product.firstImage, title: product.title)
+                        .asButton(.press) {
+                            
+                        }
                 }
             }
         }
     }
     
-    private var productRowsSection : some View {
+    private var productSection : some View {
         ForEach(productRows) { row in
             VStack(spacing: 8){
                 Text(row.title)
@@ -126,6 +129,9 @@ extension SpotifyHomeView {
                     HStack(alignment: .top, spacing: 16){
                         ForEach(row.products) { product in
                             ImageTitleRowCell(imageName: product.firstImage, imageSize: 120, title: product.title)
+                                .asButton(.press) {
+                                    
+                                }
                         }
                     }
                 }
