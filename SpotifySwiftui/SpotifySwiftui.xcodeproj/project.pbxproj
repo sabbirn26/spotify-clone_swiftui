@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8979854A2D796B59003B7D1B /* PlayListDesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897985492D796B59003B7D1B /* PlayListDesCell.swift */; };
 		89A577222D75881E004C8440 /* SpotifyHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A577212D75881E004C8440 /* SpotifyHomeView.swift */; };
 		89A577252D759430004C8440 /* SpotifyCatagoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A577242D759430004C8440 /* SpotifyCatagoryCell.swift */; };
 		89A577282D759733004C8440 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A577272D759733004C8440 /* Category.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		897985492D796B59003B7D1B /* PlayListDesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListDesCell.swift; sourceTree = "<group>"; };
 		89A577212D75881E004C8440 /* SpotifyHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyHomeView.swift; sourceTree = "<group>"; };
 		89A577242D759430004C8440 /* SpotifyCatagoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyCatagoryCell.swift; sourceTree = "<group>"; };
 		89A577272D759733004C8440 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				89CCB1202D76BA18006629CA /* SpotifyNewReleasedCell.swift */,
 				89E9598B2D76F94A00769BE3 /* ImageTitleRowCell.swift */,
 				89D6E2302D782BEB00CD72B0 /* PlayListHeaderCell.swift */,
+				897985492D796B59003B7D1B /* PlayListDesCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				89E9598C2D76F94A00769BE3 /* ImageTitleRowCell.swift in Sources */,
 				89EDEE2D2D74265300D70946 /* Constants.swift in Sources */,
 				89EDEE332D742FE400D70946 /* Product.swift in Sources */,
+				8979854A2D796B59003B7D1B /* PlayListDesCell.swift in Sources */,
 				89D6E2312D782BEB00CD72B0 /* PlayListHeaderCell.swift in Sources */,
 				89A577282D759733004C8440 /* Category.swift in Sources */,
 				89D6E2332D784BD800CD72B0 /* SpotifyPlaylistView.swift in Sources */,
