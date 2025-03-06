@@ -38,7 +38,15 @@ struct SpotifyPlaylistView: View {
                         }
                         .padding(.horizontal, 16)
                     
-                    
+                    ForEach(products) { product in
+                        SongRowCell(imageName: product.firstImage, imageSize: 100, cellTitle: product.title, cellSubtitle: product.brand) {
+                            //code here
+                        } onEllipsisPressed: {
+                            //code here
+                        }
+
+                    }
+                    .padding(.horizontal, 16)
 
                 }
             }
