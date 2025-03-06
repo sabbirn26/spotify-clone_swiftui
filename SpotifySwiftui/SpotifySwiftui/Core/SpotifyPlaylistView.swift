@@ -10,6 +10,8 @@ import SwiftUI
 struct SpotifyPlaylistView: View {
     var product: Product = .mock
     var user: User = .mock
+    
+    @State private var products: [Product] = []
     var body: some View {
         ZStack{
             Color.spBlack.ignoresSafeArea()
@@ -35,9 +37,22 @@ struct SpotifyPlaylistView: View {
                             //code here
                         }
                         .padding(.horizontal, 16)
+                    
+                    
 
                 }
             }
+        }
+        .task {
+            await getData()
+        }
+    }
+    
+    private func getData() async {
+        do {
+            products = try await DatabaseHelper().getProducts()
+        } catch {
+            
         }
     }
 }
