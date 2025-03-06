@@ -61,24 +61,28 @@ extension PlayListDesCell {
                     .background(Color.black.opacity(0.001))
                     .onTapGesture {
                         //code here
+                        onAddToPlaylistPressed?()
                     }
                 Image(systemName: "arrow.down.circle")
                     .padding(8)
                     .background(Color.black.opacity(0.001))
                     .onTapGesture {
                         //code here
+                        onDownloadPressed?()
                     }
                 Image(systemName: "square.and.arrow.up")
                     .padding(8)
                     .background(Color.black.opacity(0.001))
                     .onTapGesture {
                         //code here
+                        onSharePressed?()
                     }
                 Image(systemName: "ellipsis")
                     .padding(8)
                     .background(Color.black.opacity(0.001))
                     .onTapGesture {
                         //code here
+                        onElipsisPressed?()
                     }
                 
             }
@@ -90,6 +94,7 @@ extension PlayListDesCell {
                     .background(Color.black.opacity(0.001))
                     .onTapGesture {
                         //code here
+                        onSufflePressed?()
                     }
                 
                 Image(systemName: "play.circle.fill")
@@ -97,6 +102,7 @@ extension PlayListDesCell {
                     .background(Color.black.opacity(0.001))
                     .onTapGesture {
                         //code here
+                        onPlayPressed?()
                     }
             }
             .foregroundStyle(.spGreen)
