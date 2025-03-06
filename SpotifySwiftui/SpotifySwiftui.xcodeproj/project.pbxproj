@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8979854A2D796B59003B7D1B /* PlayListDesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897985492D796B59003B7D1B /* PlayListDesCell.swift */; };
+		8979854C2D7976CE003B7D1B /* SongRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8979854B2D7976CE003B7D1B /* SongRowCell.swift */; };
 		89A577222D75881E004C8440 /* SpotifyHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A577212D75881E004C8440 /* SpotifyHomeView.swift */; };
 		89A577252D759430004C8440 /* SpotifyCatagoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A577242D759430004C8440 /* SpotifyCatagoryCell.swift */; };
 		89A577282D759733004C8440 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A577272D759733004C8440 /* Category.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		897985492D796B59003B7D1B /* PlayListDesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListDesCell.swift; sourceTree = "<group>"; };
+		8979854B2D7976CE003B7D1B /* SongRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongRowCell.swift; sourceTree = "<group>"; };
 		89A577212D75881E004C8440 /* SpotifyHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyHomeView.swift; sourceTree = "<group>"; };
 		89A577242D759430004C8440 /* SpotifyCatagoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyCatagoryCell.swift; sourceTree = "<group>"; };
 		89A577272D759733004C8440 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				89E9598B2D76F94A00769BE3 /* ImageTitleRowCell.swift */,
 				89D6E2302D782BEB00CD72B0 /* PlayListHeaderCell.swift */,
 				897985492D796B59003B7D1B /* PlayListDesCell.swift */,
+				8979854B2D7976CE003B7D1B /* SongRowCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				89A577252D759430004C8440 /* SpotifyCatagoryCell.swift in Sources */,
 				89EDEE2F2D7428D200D70946 /* DatabaseHelper.swift in Sources */,
 				89EDEE312D742D6900D70946 /* UserInterest.swift in Sources */,
+				8979854C2D7976CE003B7D1B /* SongRowCell.swift in Sources */,
 				89CCB11F2D76AE52006629CA /* SpotifyRecentCells.swift in Sources */,
 				89EDEE3A2D74311300D70946 /* InterestPillView.swift in Sources */,
 				89EDEE1B2D74203F00D70946 /* ContentView.swift in Sources */,
