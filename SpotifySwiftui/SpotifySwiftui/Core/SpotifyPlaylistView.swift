@@ -46,7 +46,7 @@ struct SpotifyPlaylistView: View {
                         }
 
                     }
-                    .padding(.horizontal, 16)
+                    .padding(.leading, 16)
 
                 }
             }
