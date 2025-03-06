@@ -50,6 +50,18 @@ struct SpotifyPlaylistView: View {
 
                 }
             }
+            .scrollIndicators(.hidden)
+            
+//            ZStack{
+//                Text(product.title)
+//                    .font(.headline)
+//                    .foregroundStyle(.spWhite)
+//                    .padding(.vertical, 20)
+//                    .frame(maxWidth: .infinity)
+//            }
+//            .background()
+//            .frame(height: 100)
+//            .frame(maxWidth: .infinity, alignment: .top)
         }
         .task {
             await getData()
