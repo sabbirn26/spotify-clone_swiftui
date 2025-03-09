@@ -6,11 +6,11 @@
 //
 
 import SwiftUI
-
+import SwiftfulUI
 struct SpotifyPlaylistView: View {
     var product: Product = .mock
     var user: User = .mock
-    
+    @State private var showHeader : Bool = true
     @State private var products: [Product] = []
     var body: some View {
         ZStack{
@@ -19,6 +19,9 @@ struct SpotifyPlaylistView: View {
             ScrollView(.vertical) {
                 LazyVStack(spacing: 12) {
                     PlayListHeaderCell(height: 250, title: product.title, subtitle: product.brand ?? "", imageName: product.thumbnail)
+                        .readingFrame{ frame in
+                            showHeader = frame.maxY < 150 ? true : false
+                        }
                     
                     PlayListDesCell(
                         descriptionText: product.description,
@@ -52,18 +55,20 @@ struct SpotifyPlaylistView: View {
                 
             }
             .scrollIndicators(.hidden)
-            if true {
                 ZStack{
                     Text(product.title)
                         .font(.headline)
                         .foregroundStyle(.spWhite)
                         .padding(.vertical, 20)
                         .frame(maxWidth: .infinity)
+                        .background(.spBlack)
+                        .offset(y: showHeader ? 0 : -40)
+                        .opacity(showHeader ? 1 : 0)
                     
                     Image(systemName: "chevron.left")
                         .font(.title3)
                         .padding(10)
-                        .background(.spGray.opacity(0.7))
+                        .background(showHeader ? .spBlack.opacity(0.001):.spGray.opacity(0.7))
                         .clipShape(Circle())
                         .onTapGesture {
                             //code here
@@ -71,9 +76,9 @@ struct SpotifyPlaylistView: View {
                         .padding(.leading, 16)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
-                .background(.blue)
+                .foregroundStyle(.spWhite)
+                .animation(.smooth(duration: 0.2), value: showHeader)
                 .frame(maxHeight: .infinity, alignment: .top)
-            }
         }
         .task {
             await getData()
