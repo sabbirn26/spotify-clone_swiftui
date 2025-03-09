@@ -7,11 +7,13 @@
 
 import SwiftUI
 import SwiftfulUI
+import SwiftfulRouting
 struct SpotifyPlaylistView: View {
     var product: Product = .mock
     var user: User = .mock
     @State private var showHeader : Bool = true
     @State private var products: [Product] = []
+    @Environment(\.router) var router
     var body: some View {
         ZStack{
             Color.spBlack.ignoresSafeArea()
@@ -44,6 +46,7 @@ struct SpotifyPlaylistView: View {
                     ForEach(products) { product in
                         SongRowCell(imageName: product.firstImage, imageSize: 100, cellTitle: product.title, cellSubtitle: product.brand) {
                             //code here
+                            goToSongView(product: product)
                         } onEllipsisPressed: {
                             //code here
                         }
@@ -72,6 +75,7 @@ struct SpotifyPlaylistView: View {
                         .clipShape(Circle())
                         .onTapGesture {
                             //code here
+                            router.dismissScreen()
                         }
                         .padding(.leading, 16)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -95,6 +99,16 @@ struct SpotifyPlaylistView: View {
     }
 }
 
+extension SpotifyPlaylistView {
+    private func goToSongView(product: Product) {
+        router.showScreen(.push) { _ in
+            SpotifyPlaylistView(product: product, user: user)
+        }
+    }
+}
+
 #Preview {
-    SpotifyPlaylistView()
+    RouterView { _ in
+        SpotifyPlaylistView()
+    }
 }
