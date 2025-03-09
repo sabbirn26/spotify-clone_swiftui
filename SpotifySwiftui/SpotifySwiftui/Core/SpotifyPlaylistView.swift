@@ -80,6 +80,7 @@ struct SpotifyPlaylistView: View {
                 .animation(.smooth(duration: 0.2), value: showHeader)
                 .frame(maxHeight: .infinity, alignment: .top)
         }
+        .navigationBarBackButtonHidden()
         .task {
             await getData()
         }

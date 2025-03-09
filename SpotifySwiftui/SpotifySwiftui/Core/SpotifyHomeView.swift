@@ -7,11 +7,14 @@
 
 import SwiftUI
 import SwiftfulUI
+import SwiftfulRouting
+
 struct SpotifyHomeView: View {
     @State private var currentUser: User? = nil
     @State private var selectedCategory: Category? = nil
     @State private var products: [Product] = []
     @State private var productRows: [ProductRow] = []
+    @Environment(\.router) var router
     var body: some View {
         ZStack{
             Color.spBlack.ignoresSafeArea()
@@ -103,7 +106,7 @@ extension SpotifyHomeView {
                 if let product {
                     SpotifyRecentCells(imageName: product.firstImage, title: product.title)
                         .asButton(.press) {
-                            
+                            goToPlayListView(product: product)
                         }
                 }
             }
@@ -125,7 +128,7 @@ extension SpotifyHomeView {
                         ForEach(row.products) { product in
                             ImageTitleRowCell(imageName: product.firstImage, imageSize: 120, title: product.title)
                                 .asButton(.press) {
-                                    
+                                    goToPlayListView(product: product)
                                 }
                         }
                     }
@@ -136,15 +139,24 @@ extension SpotifyHomeView {
         }
     }
     
+    private func goToPlayListView(product: Product) {
+        guard let currentUser else { return }
+        router.showScreen(.push) { _ in
+            SpotifyPlaylistView(product: product, user: currentUser)
+        }
+    }
+    
     private func newReleasedSection(product: Product) -> some View {
         SpotifyNewReleasedCell(imageName: product.firstImage, headline: product.brand, subheadline: product.category, title: product.title, subtitle: product.description, addtoPlayListBtnAction: {
             
         }, playThePlayListBtnAction: {
-            
+            goToPlayListView(product: product)
         })
     }
 }
 
 #Preview {
-    SpotifyHomeView()
+    RouterView { _ in
+        SpotifyHomeView()
+    }
 }
