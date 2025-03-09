@@ -49,19 +49,31 @@ struct SpotifyPlaylistView: View {
                     .padding(.leading, 16)
 
                 }
+                
             }
             .scrollIndicators(.hidden)
-            
-//            ZStack{
-//                Text(product.title)
-//                    .font(.headline)
-//                    .foregroundStyle(.spWhite)
-//                    .padding(.vertical, 20)
-//                    .frame(maxWidth: .infinity)
-//            }
-//            .background()
-//            .frame(height: 100)
-//            .frame(maxWidth: .infinity, alignment: .top)
+            if true {
+                ZStack{
+                    Text(product.title)
+                        .font(.headline)
+                        .foregroundStyle(.spWhite)
+                        .padding(.vertical, 20)
+                        .frame(maxWidth: .infinity)
+                    
+                    Image(systemName: "chevron.left")
+                        .font(.title3)
+                        .padding(10)
+                        .background(.spGray.opacity(0.7))
+                        .clipShape(Circle())
+                        .onTapGesture {
+                            //code here
+                        }
+                        .padding(.leading, 16)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .background(.blue)
+                .frame(maxHeight: .infinity, alignment: .top)
+            }
         }
         .task {
             await getData()
