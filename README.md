@@ -9,11 +9,11 @@ Screenshots 📱
   <tr>
     <td align="center">
       <img src="/screenshots/home.png" width="250" alt="Home View"/><br/>
-      <em>Launch Screen</em>
+      <em>Home View</em>
     </td>
     <td align="center">
       <img src="/screenshots/playlist.png" width="250" alt="Playlist View"/><br/>
-      <em>Home Screen</em>
+      <em>Playlist View</em>
     </td>
 <!--     <td align="center">
       <img src="/screenshots/details.png" width="250" alt="Details Screen"/><br/>
