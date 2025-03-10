@@ -24,6 +24,13 @@ Screenshots 📱
 </table>
 
 ---
+## App Demo 🎥
+
+| Feature               | Demo |
+|----------------------|------|
+| **Home View** <br> - Display recently played songs <br> - Browse categories <br> - View new releases | <img src="/demos/home-demo.gif" width="250"> |
+| **Playlist View** <br> - View playlist details <br> - Play and shuffle songs <br> - Interactive UI animations | <img src="/demos/playlist-demo.gif" width="250"> |
+---
 
 ## 🚀 Features
 
