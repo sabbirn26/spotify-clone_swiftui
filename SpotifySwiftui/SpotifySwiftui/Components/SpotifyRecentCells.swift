@@ -7,32 +7,38 @@
 
 import SwiftUI
 
+// Represents a recent item cell with an image and a title
 struct SpotifyRecentCells: View {
-    var imageName : String = Constants.randomImage
-    var title : String = "Some random title"
+    var imageName: String = Constants.randomImage // Default image
+    var title: String = "Some random title" // Default title
+    
     var body: some View {
-        HStack{
+        HStack {
+            // Loads and displays an image with a fixed size
             ImageLoaderView(urlString: imageName)
                 .frame(width: 55, height: 55)
             
+            // Displays the title with styling
             Text(title)
                 .font(.callout)
                 .fontWeight(.semibold)
-                .lineLimit(2)
-            Spacer()
+                .lineLimit(2) // Limits text to two lines
+            
+            Spacer() // Pushes content to the left
         }
         .padding(.trailing, 8)
-        .themeColors(isSelected: false)
+        .themeColors(isSelected: false) // Applies default styling
         .frame(maxWidth: .infinity, alignment: .leading)
-        .cornerRadius(6)
+        .cornerRadius(6) // Rounds the corners
     }
 }
 
+// Preview to test how the cells look in different layouts
 #Preview {
-    ZStack{
+    ZStack {
         Color.spBlack.ignoresSafeArea()
         
-        VStack{
+        VStack {
             HStack {
                 SpotifyRecentCells()
                 SpotifyRecentCells()
