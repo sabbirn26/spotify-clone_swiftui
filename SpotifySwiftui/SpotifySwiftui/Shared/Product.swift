@@ -7,34 +7,40 @@
 
 import Foundation
 
+// Struct representing an array of products, conforming to Codable for easy encoding/decoding
 struct ProductArray: Codable {
-    let products: [Product]
-    let total, skip, limit: Int
+    let products: [Product] // List of products
+    let total, skip, limit: Int // Pagination details
 }
 
+// Struct representing an individual product, conforming to Codable for JSON parsing and Identifiable for use in SwiftUI lists
 struct Product: Codable, Identifiable {
-    let id: Int
-    let title, description: String
-    let price: Double // Double not Int
-    let discountPercentage, rating: Double
-    let stock: Int
-    let brand: String? // <- Optional
-    let category: String
-    let thumbnail: String
-    let images: [String]
-    
+    let id: Int // Unique identifier for the product
+    let title, description: String // Product title and description
+    let price: Double // Price of the product, stored as Double for precision
+    let discountPercentage, rating: Double // Discount percentage and rating values
+    let stock: Int // Available stock count
+    let brand: String? // Optional brand name (can be nil)
+    let category: String // Product category
+    let thumbnail: String // Thumbnail image URL
+    let images: [String] // Array of image URLs
+
+    // Computed property that returns the first image from the images array or a random default image
     var firstImage: String {
         images.first ?? Constants.randomImage
     }
-    
+
+    // Computed property to return brand name, or an empty string if brand is nil
     var _brand: String {
         brand ?? ""
     }
-    
+
+    // Randomly determines if a product is "recently added" (25% chance)
     let recentlyAdded: Bool = {
         return Int.random(in: 1...4) == 1
     }()
     
+    // A static mock product for testing or previews
     static var mock: Product {
         Product(
             id: 123,
@@ -52,8 +58,9 @@ struct Product: Codable, Identifiable {
     }
 }
 
+// Struct representing a row of products, used for grouping products by categories or sections in a UI
 struct ProductRow: Identifiable {
-    let id = UUID().uuidString
-    let title: String
-    let products: [Product]
+    let id = UUID().uuidString // Unique identifier for the row
+    let title: String // Title for the row (e.g., category name)
+    let products: [Product] // List of products in this row
 }
