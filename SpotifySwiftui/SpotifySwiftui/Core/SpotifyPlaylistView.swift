@@ -24,45 +24,32 @@ struct SpotifyPlaylistView: View {
             
             ScrollView(.vertical) {
                 LazyVStack(spacing: 12) {
-                    // Playlist header section
                     PlayListHeaderCell(height: 250, title: product.title, subtitle: product.brand ?? "", imageName: product.thumbnail)
                         .readingFrame { frame in
-                            showHeader = frame.maxY < 150 ? true : false
+                            showHeader = frame.maxY < 150
                         }
                     
-                    // Playlist description and actions
                     PlayListDesCell(
                         descriptionText: product.description,
                         crUserName: user.lastName,
-                        subheadline: product.category) {
-                            // Handle custom action
-                        } onDownloadPressed: {
-                            // Handle download action
-                        } onSharePressed: {
-                            // Handle share action
-                        } onElipsisPressed: {
-                            // Handle more options action
-                        } onSufflePressed: {
-                            // Handle shuffle action
-                        } onPlayPressed: {
-                            // Handle play action
-                        }
+                        subheadline: product.category,
+                        onDownloadPressed: {},
+                        onSharePressed: {},
+                        onElipsisPressed: {},
+                        onSufflePressed: {},
+                        onPlayPressed: {})
                         .padding(.horizontal, 16)
                     
-                    // Song list section
                     ForEach(products) { product in
                         SongRowCell(imageName: product.firstImage, imageSize: 100, cellTitle: product.title, cellSubtitle: product.brand) {
                             goToSongView(product: product)
-                        } onEllipsisPressed: {
-                            // Handle more options for song
-                        }
+                        } onEllipsisPressed: {}
                     }
                     .padding(.leading, 16)
                 }
             }
             .scrollIndicators(.hidden)
             
-            // Floating header title and back button
             ZStack {
                 Text(product.title)
                     .font(.headline)
@@ -78,9 +65,7 @@ struct SpotifyPlaylistView: View {
                     .padding(10)
                     .background(showHeader ? .spBlack.opacity(0.001) : .spGray.opacity(0.7))
                     .clipShape(Circle())
-                    .onTapGesture {
-                        router.dismissScreen()
-                    }
+                    .onTapGesture { router.dismissScreen() }
                     .padding(.leading, 16)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
@@ -89,23 +74,17 @@ struct SpotifyPlaylistView: View {
             .frame(maxHeight: .infinity, alignment: .top)
         }
         .navigationBarBackButtonHidden()
-        .task {
-            await getData()
-        }
+        .task { await getData() }
     }
     
-    // Fetch products data
     private func getData() async {
         do {
             products = try await DatabaseHelper().getProducts()
-        } catch {
-            // Handle error
-        }
+        } catch {}
     }
 }
 
 extension SpotifyPlaylistView {
-    // Navigate to song details view
     private func goToSongView(product: Product) {
         router.showScreen(.push) { _ in
             SpotifyPlaylistView(product: product, user: user)
